@@ -1,0 +1,11 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+scoop install allure
+scoop install git
+scoop install openjdk21
+C:\Users\admin\scoop\apps\allure\current\bin
+
+
+$env:PATH += ";$HOME\scoop\apps\allure\current\bin"
+
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")

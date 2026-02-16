@@ -1,0 +1,49 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\Users\student> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Изменение политики выполнения
+Политика выполнения защищает компьютер от ненадежных сценариев. Изменение политики выполнения может поставить под
+угрозу безопасность системы, как описано в разделе справки, вызываемом командой about_Execution_Policies и
+расположенном по адресу https:/go.microsoft.com/fwlink/?LinkID=135170 . Вы хотите изменить политику выполнения?
+[Y] Да - Y  [A] Да для всех - A  [N] Нет - N  [L] Нет для всех - L  [S] Приостановить - S  [?] Справка
+(значением по умолчанию является "N"):Y
+PS C:\Users\student> Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+Initializing...
+Downloading...
+Creating shim...
+Adding ~\scoop\shims to your path.
+Scoop was installed successfully!
+Type 'scoop help' for instructions.
+PS C:\Users\student> java --version
+Unrecognized option: --version
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+PS C:\Users\student> git --version
+git version 2.51.0.windows.2
+PS C:\Users\student> scoop bucket add java
+Checking repo... OK
+The java bucket was added successfully.
+PS C:\Users\student> scoop install openjdk21
+Installing 'openjdk21' (21.0.2-13) [64bit] from 'java' bucket
+openjdk-21.0.2_windows-x64_bin.zip (192,0 MB) [===============================================================] 100%
+Checking hash of openjdk-21.0.2_windows-x64_bin.zip ... ok.
+Extracting openjdk-21.0.2_windows-x64_bin.zip ... done.
+Linking ~\scoop\apps\openjdk21\current => ~\scoop\apps\openjdk21\21.0.2-13
+Adding ~\scoop\apps\openjdk21\current\bin to your path.
+'openjdk21' (21.0.2-13) was installed successfully!
+PS C:\Users\student> scoop install allure
+Installing 'allure' (2.36.0) [64bit] from 'main' bucket
+allure-2.36.0.zip (23,3 MB) [=================================================================================] 100%
+Checking hash of allure-2.36.0.zip ... ok.
+Extracting allure-2.36.0.zip ... done.
+Linking ~\scoop\apps\allure\current => ~\scoop\apps\allure\2.36.0
+Creating shim for 'allure'.
+'allure' (2.36.0) was installed successfully!
+PS C:\Users\student> allure --version
+2.36.0
+PS C:\Users\student> $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+PS C:\Users\student>
