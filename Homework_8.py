@@ -1,8 +1,4 @@
-from selenium import webdriver
-import time
-from selenium.common import NoSuchElementException
-from selenium.webdriver.common.by import By
-
+import selenium
 driver = webdriver.Chrome()
 
 def test_open_litress():
