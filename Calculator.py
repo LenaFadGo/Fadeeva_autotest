@@ -1,4 +1,3 @@
-def calculator
-    val = 2+2
-    assert val
-    return val
+def summ_numbers():
+    a = 2 + 2
+    assert a
